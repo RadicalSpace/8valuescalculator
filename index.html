@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>8Values Calculator</title>
+  <link rel="icon" type="image/png" href="/icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>8Values Calculator!</h1>
+  
+  <div class="axis" style="padding:10px;">
+    <img id="img-equality" src="value_images/equality.svg" height="128pt"/>
+    <div class="bar equality" id="bar-equality"><div class="text-wrapper" id="equality">50%</div></div>
+    <div class="bar wealth" id="bar-wealth"><div class="text-wrapper" id="wealth">50%</div></div>
+    <img id="img-wealth" src="value_images/markets.svg" height="128pt"/>
+  </div>
+  
+  <div class="axis" style="padding:10px;">
+    <img id="img-might" src="value_images/nation.svg" height="128pt"/>
+    <div class="bar might" id="bar-might"><div class="text-wrapper" id="might">50%</div></div>
+    <div class="bar peace" id="bar-peace"><div class="text-wrapper" id="peace">50%</div></div>
+    <img id="img-peace" src="value_images/globe.svg" height="128pt"/>
+  </div>
+
+  <div class="axis" style="padding:10px;">
+    <img id="img-liberty" src="value_images/liberty.svg" height="128pt"/>
+    <div class="bar liberty" id="bar-liberty"><div class="text-wrapper" id="liberty">50%</div></div>
+    <div class="bar authority" id="bar-authority"><div class="text-wrapper" id="authority">50%</div></div>
+    <img id="img-authority" src="value_images/authority.svg" height="128pt"/>
+  </div>
+
+  <div class="axis" style="padding:10px;">
+    <img id="img-tradition" src="value_images/tradition.svg" height="128pt"/>
+    <div class="bar tradition" id="bar-tradition"><div class="text-wrapper" id="tradition">50%</div></div>
+    <div class="bar progress" id="bar-progress"><div class="text-wrapper" id="progress">50%</div></div>
+    <img id="img-progress" src="value_images/progress.svg" height="128pt"/>
+  </div>
+  
+  <h2 style="margin-bottom: 20px;">Closest Match: <span class="weight-300" id="ideology-label">Centrist</span></h2>
+  <p style="font-family: Montserrat; margin-bottom: 40px;">Select one of the following ideologies and see its corresponding 8Values values:</p>
+  <div id="button-layout">
+    <button class="ideology-button" id="anarcho-communism-button">Anarcho-Communism</button>
+    <button class="ideology-button" id="libertarian-communism-button">Libertarian Communism</button>
+    <button class="ideology-button" id="trotskyism-button">Trotskyism</button>
+    <button class="ideology-button" id="marxism-button">Marxism</button>
+    <button class="ideology-button" id="de-leonism-button">De Leonism</button>
+    <button class="ideology-button" id="leninism-button">Leninism</button>
+    <button class="ideology-button" id="stalinism/maoism-button">Stalinism/Maoism</button>
+    <button class="ideology-button" id="religious-communism-button">Religious Communism</button>
+    <button class="ideology-button" id="state-socialism-button">State Socialism</button>
+    <button class="ideology-button" id="theocratic-socialism-button">Theocratic Socialism</button>
+    <button class="ideology-button" id="religious-socialism-button">Religious Socialism</button>
+    <button class="ideology-button" id="democratic-socialism-button">Democratic Socialism</button>
+    <button class="ideology-button" id="revolutionary-socialism-button">Revolutionary Socialism</button>
+    <button class="ideology-button" id="libertarian-socialism-button">Libertarian Socialism</button>
+    <button class="ideology-button" id="anarcho-syndicalism-button">Anarcho-Syndicalism</button>
+    <button class="ideology-button" id="left-wing-populism-button">Left-Wing Populism</button>
+    <button class="ideology-button" id="theocratic-distributism-button">Theocratic Distributism</button>
+    <button class="ideology-button" id="distributism-button">Distributism</button>
+    <button class="ideology-button" id="social-liberalism-button">Social Liberalism</button>
+    <button class="ideology-button" id="christian-democracy-button">Christian Democracy</button>
+    <button class="ideology-button" id="social-democracy-button">Social Democracy</button>
+    <button class="ideology-button" id="progressivism-button">Progressivism</button>
+    <button class="ideology-button" id="-anarcho-mutualism-button"> Anarcho-Mutualism</button>
+    <button class="ideology-button" id="national-totalitarianism-button">National Totalitarianism</button>
+    <button class="ideology-button" id="global-totalitarianism-button">Global Totalitarianism</button>
+    <button class="ideology-button" id="technocracy-button">Technocracy</button>
+    <button class="ideology-button" id="centrist-button">Centrist</button>
+    <button class="ideology-button" id="liberalism-button">Liberalism</button>
+    <button class="ideology-button" id="religious-anarchism-button">Religious Anarchism</button>
+    <button class="ideology-button" id="right-wing-populism-button">Right-Wing Populism</button>
+    <button class="ideology-button" id="moderate-conservatism-button">Moderate Conservatism</button>
+    <button class="ideology-button" id="reactionary-button">Reactionary</button>
+    <button class="ideology-button" id="social-libertarianism-button">Social Libertarianism</button>
+    <button class="ideology-button" id="libertarianism-button">Libertarianism</button>
+    <button class="ideology-button" id="anarcho-egoism-button">Anarcho-Egoism</button>
+    <button class="ideology-button" id="nazism-button">Nazism</button>
+    <button class="ideology-button" id="autocracy-button">Autocracy</button>
+    <button class="ideology-button" id="fascism-button">Fascism</button>
+    <button class="ideology-button" id="capitalist-fascism-button">Capitalist Fascism</button>
+    <button class="ideology-button" id="conservatism-button">Conservatism</button>
+    <button class="ideology-button" id="neo-liberalism-button">Neo-Liberalism</button>
+    <button class="ideology-button" id="classical-liberalism-button">Classical Liberalism</button>
+    <button class="ideology-button" id="authoritarian-capitalism-button">Authoritarian Capitalism</button>
+    <button class="ideology-button" id="state-capitalism-button">State Capitalism</button>
+    <button class="ideology-button" id="neo-conservatism-button">Neo-Conservatism</button>
+    <button class="ideology-button" id="fundamentalism-button">Fundamentalism</button>
+    <button class="ideology-button" id="libertarian-capitalism-button">Libertarian Capitalism</button>
+    <button class="ideology-button" id="market-anarchism-button">Market Anarchism</button>
+    <button class="ideology-button" id="objectivism-button">Objectivism</button>
+    <button class="ideology-button" id="totalitarian-capitalism-button">Totalitarian Capitalism</button>
+    <button class="ideology-button" id="ultra-capitalism-button">Ultra-Capitalism</button>
+    <button class="ideology-button" id="anarcho-capitalism-button">Anarcho-Capitalism</button>
+  </div>
+  <div id="credits"><a href="https://8values.github.io/">Check out the original site! (Not developed by me)</a></div>
+  <p style="font-family: Montserrat; margin-bottom: 40px;margin-top: 20px;">Site by Leandros Dimitropoulos <br>With help from Dimitris Dimitropoulos</p>
+  <script src="script.js"></script>
+</html>
